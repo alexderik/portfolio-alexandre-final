@@ -1,0 +1,283 @@
+/* TÍTULOS GERAIS */
+h1, h2 {
+    color: #007bff; /* Usa o azul primário para todos os títulos grandes */
+    margin-bottom: 20px;
+}
+
+/* NOVO: Adiciona uma linha sutil para separar o conteúdo */
+main h2 {
+    border-bottom: 1px solid #ddd; 
+    padding-bottom: 5px;
+}
+
+/* 1. RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garante que padding e borda não aumentem o tamanho do elemento */
+}
+
+/* 2. ESTILO GERAL DO CORPO (BODY) */
+body {
+    font-family: Arial, sans-serif; /* Escolha uma fonte */
+    line-height: 1.6;
+    background-color: #f4f4f4; /* Fundo claro */
+    color: #333; /* Cor do texto */
+}
+
+/* 3. ESTILO DO CONTAINER PRINCIPAL (para centralizar o conteúdo) */
+main {
+    max-width: 1100px; /* Limita a largura do conteúdo */
+    margin: 20px auto; /* Centraliza na tela e adiciona margem superior/inferior */
+    padding: 20px;
+    background-color: #fff; /* Fundo branco para o conteúdo principal */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ESTILO DO CABEÇALHO (HEADER) */
+header {
+    background-color: #333; /* Cor escura para o menu */
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+}
+
+/* ESTILO DA LISTA DE LINKS (UL) */
+nav ul {
+    list-style: none; /* Remove os marcadores de lista */
+    display: flex; /* Permite que os itens fiquem lado a lado */
+    justify-content: center; /* Centraliza os links */
+}
+
+/* ESTILO DOS ITENS DO MENU (LI) */
+nav ul li {
+    margin: 0 20px;
+}
+
+/* ESTILO DOS LINKS (A) */
+nav ul li a {
+    color: white;
+    text-decoration: none; /* Remove o sublinhado padrão */
+    padding: 5px 10px;
+    transition: background-color 0.3s; /* Transição suave para o efeito hover */
+}
+
+/* EFEITO HOVER (passar o mouse) */
+nav ul li a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+/* 4. RESPONSIVIDADE PARA TELAS PEQUENAS (EX: CELULAR) */
+@media (max-width: 768px) {
+    /* Altera o display para empilhar os links verticalmente */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    /* Adiciona margem vertical entre os links empilhados */
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    /* Reduz o padding do conteúdo principal */
+    main {
+        padding: 10px;
+        margin: 10px auto;
+    }
+}
+
+/* Adicione estas regras no final do seu arquivo style.css */
+
+/* Estilo para a seção do formulário */
+#contato {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+/* Estilo para cada grupo de label + input */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Estilo para os labels */
+#contato label {
+    display: block; /* Garante que o label ocupe toda a linha */
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Estilo para inputs e textarea */
+#contato input[type="text"],
+#contato input[type="email"],
+#contato textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Inclui padding e borda na largura total */
+}
+
+/* Estilo para o botão de envio */
+#contato button[type="submit"] {
+    background-color: #007bff; /* Cor primária */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#contato button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* CORREÇÃO FINAL: Bloco de estilo da Formação (css/style.css) */
+
+/* Estilo para a seção Formação */
+#formacao {
+    margin-top: 20px;
+}
+
+#formacao h2 {
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+/* Estilo para cada artigo/curso */
+#formacao .curso {
+    border: 1px solid #eee;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+#formacao .curso h3 {
+    color: #007bff;
+    margin-bottom: 5px;
+}
+
+/* REGRAS CORRIGIDAS para o alinhamento do bullet point */
+#formacao ul {
+    list-style-type: disc;          /* Usa o marcador de ponto nativo */
+    list-style-position: outside;   /* Garante que o marcador seja considerado na margem */
+    padding-left: 20px;             /* Adiciona um recuo menor e mais controlado */
+    margin-top: 15px;
+}
+
+#formacao ul li {
+    margin-bottom: 8px;
+    /* Adiciona um pequeno padding à esquerda para separar o texto do marcador */
+    padding-left: 5px; 
+}
+
+/* Estilo para a seção Portfólio (Adicione ao final de style.css) */
+#portfolio-list {
+    margin-top: 20px;
+    /* Usa grid para organizar os cards em colunas e ser fácil de adaptar */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 2 ou 3 colunas em tela grande */
+    gap: 20px; /* Espaçamento entre os cards */
+}
+
+.projeto-card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
+    background-color: #fff;
+}
+
+.projeto-card h3 {
+    color: #007bff;
+    margin-bottom: 10px;
+    border-bottom: 1px dashed #eee;
+    padding-bottom: 5px;
+}
+
+.projeto-card p {
+    margin-bottom: 10px;
+}
+
+.projeto-card .links a {
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: 10px;
+    padding: 8px 12px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9em;
+    transition: background-color 0.3s;
+}
+
+.link-site {
+    background-color: #007bff;
+    color: white;
+}
+
+.link-repo {
+    background-color: #333; /* Cor do GitHub */
+    color: white;
+}
+
+.link-site:hover {
+    background-color: #0056b3;
+}
+
+.link-repo:hover {
+    background-color: #1a1a1a;
+}
+
+/* ESTILO DO RODAPÉ (FOOTER) - Para centralizar o copyright */
+footer {
+    background-color: #333; /* Cor escura consistente com o header */
+    color: white; /* Texto claro */
+    padding: 15px 0;
+    text-align: center; /* ESSENCIAL: Centraliza o texto do copyright */
+    font-size: 0.9em;
+    width: 100%; /* Garante que ele ocupe toda a largura */
+}
+
+footer p {
+    margin: 0; /* Remove a margem padrão do parágrafo */
+}
+
+/* 1. LAYOUT FLEXBOX: Coloca a foto e o texto lado a lado (Mantenha este bloco) */
+.apresentacao-container {
+    display: flex; 
+    align-items: flex-start; /* Alinha o texto ao topo da foto */
+    gap: 30px; /* Espaço entre a foto e o texto */
+    margin-bottom: 40px; /* Aumenta a margem para separar da seção "Minha Jornada..." */
+}
+
+/* 2. CORREÇÃO DA IMAGEM: Torna a foto maior e garante a proporção */
+#profile-pic {
+    /* Aumenta o tamanho (ex: de 150px para 200px) */
+    width: 200px; 
+    height: 200px; 
+    
+    /* Garante que ocupe o espaço reservado e não encolha */
+    min-width: 200px; 
+    
+    border-radius: 50%; /* Mantém o formato circular */
+    object-fit: cover; 
+    
+    margin: 0; 
+    border: 3px solid #007bff; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.apresentacao-texto {
+    /* Faz o texto ocupar todo o espaço restante do lado direito */
+    flex-grow: 1; 
+}
